@@ -1,0 +1,1 @@
+[{"dep": "seoul", "arr": "ast", "dur": 4.5, "price": 230230}, {"dep": "ast", "arr": "seoul", "dur": 2.3, "price": 233000}, {"dep": "sco", "arr": "chn", "dur": 1.3, "price": 567533}, {"dep": "msc", "arr": "ast", "dur": 3.1, "price": 879683}, {"dep": "ptr", "arr": "msc", "dur": 5.5, "price": 332434}, {"dep": "chn", "arr": "ast", "dur": 0.3, "price": 985634}]
