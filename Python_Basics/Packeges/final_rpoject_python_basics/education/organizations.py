@@ -1,4 +1,6 @@
 import csv
+# from users import Teacher
+# from users import Student
 
 
 class School():
@@ -90,11 +92,15 @@ class School():
             df = csv.writer(file)
             df.writerows(report)
 
+            df.close()
+
         return file_name
 
 
-# Student(name="John", familyname="Wick", age=35, gender="male", nationality="USA", school="NIS", subjects='Programming, Gym')
-# Teacher(name="Nill", familyname="Wolker", age=23, gender="male", nationality="UK", school="№23", subjects='Math, Chemistry')
+# Student(name="John", familyname="Wick", age=35, gender="male",
+#         nationality="USA", school="NIS", subjects='Programming, Gym')
+# Teacher(name="Nill", familyname="Wolker", age=23, gender="male",
+#         nationality="UK", school="№23", subjects='Math, Chemistry')
 
 # 1-5 школа
 # -----------
@@ -114,6 +120,8 @@ class School():
 #                    nationality="Kazakh", school="AUPET", subjects=['Math', 'Programming'])
 # student5 = Student(name="Madik", familyname="Abdizhamal", age=20, gender="male",
 #                    nationality="Kazakh", school="AUPET", subjects=['Math', 'Programming'])
+# student6 = Student(name="Madik", familyname="Abdizhamal", age=20, gender="male",
+#                    nationality="Kazakh", school="AUPET", subjects=['Math', 'Programming'])
 
 
 # teacher1 = Teacher(name="Jhon", familyname="Smith", age=44, gender="male",
@@ -125,6 +133,8 @@ class School():
 # teacher4 = Teacher(name="Gibi", familyname="Gaba", age=77, gender="female",
 #                    nationality="Kazakh", school="AUPET", subjects=['Chemistry', 'Math'])
 # teacher5 = Teacher(name="Huba", familyname="Buba", age=55, gender="male",
+#                    nationality="Chinese", school="AUPET", subjects=['Chemistry', 'Math'])
+# teacher6 = Teacher(name="Huba", familyname="Buba", age=55, gender="male",
 #                    nationality="Chinese", school="AUPET", subjects=['Chemistry', 'Math'])
 
 
