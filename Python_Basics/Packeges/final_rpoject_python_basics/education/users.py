@@ -6,6 +6,21 @@ class Human:
         self.gender = gender
         self.nationality = nationality
 
+    def __eq__(self, other):
+        if type(other) is type(self):
+            return (
+                self.name == other.name,
+                self.familyname == other.familyname,
+                self.age == other.age,
+                self.gender == other.gender,
+                self.nationality == other.nationality
+            )
+        else:
+            return False
+
+    def __hash__(self):
+        return hash(self.name, self.familyname, self.age, self.gender, self.nationality)
+
     def set_name(self, name=None):
         self.name = name
 
@@ -38,6 +53,31 @@ class Student(Human):
         self.school = school
         self.subjects = subjects
 
+    def __eq__(self, other):
+        if type(other) is type(self):
+            return (
+                self.name == other.name and
+                self.familyname == other.familyname and
+                self.age == other.age and
+                self.gender == other.gender and
+                self.nationality == other.nationality and
+                self.school == other.school and
+                self.subjects == other.subjects
+            )
+        else:
+            return False
+
+    def __hash__(self):
+        return hash(
+            self.name,
+            self.familyname,
+            self.age,
+            self.gender,
+            self.nationality,
+            self.school,
+            tuple(self.subjects) if self.subjects else None
+        )
+
     def set_school(self, school=None):
         self.school = school
 
@@ -60,6 +100,31 @@ class Teacher(Human):
         )
         self.school = school
         self.subjects = subjects
+
+    def __eq__(self, other):
+        if type(other) is type(self):
+            return (
+                self.name == other.name and
+                self.familyname == other.familyname and
+                self.age == other.age and
+                self.gender == other.gender and
+                self.nationality == other.nationality and
+                self.school == other.school and
+                self.subjects == other.subjects
+            )
+        else:
+            return False
+
+    def __hash__(self):
+        return hash(
+            self.name,
+            self.familyname,
+            self.age,
+            self.gender,
+            self.nationality,
+            self.school,
+            tuple(self.subjects) if self.subjects else None
+        )
 
     def set_school(self, school=None):
         self.school = school
