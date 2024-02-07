@@ -9,10 +9,10 @@ class Human:
     def __eq__(self, other):
         if type(other) is type(self):
             return (
-                self.name == other.name,
-                self.familyname == other.familyname,
-                self.age == other.age,
-                self.gender == other.gender,
+                self.name == other.name and
+                self.familyname == other.familyname and
+                self.age == other.age and
+                self.gender == other.gender and
                 self.nationality == other.nationality
             )
         else:
